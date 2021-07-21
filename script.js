@@ -5,6 +5,7 @@ var TicTacToe={
         TicTacToe.turnIndicator=document.querySelector(".turnIndicator");
         TicTacToe.button=document.querySelector(".newGame");
         TicTacToe.board=document.querySelector(".board");
+        //horizontal, vertical and diagonal wins
         TicTacToe.winningSets=[
             [0,1,2],[3,4,5],[6,7,8],
             [0,3,6],[1,4,7],[2,5,8],
@@ -32,6 +33,7 @@ var TicTacToe={
         this.activePlayer=0;
         this.gameOver=false;
         this.squares.forEach(function(x){
+            //removes x's and o's 
             x.classList.remove("X");
             x.classList.remove("O");
         })
@@ -47,11 +49,12 @@ var TicTacToe={
         if(!this.gameOver && e1.classList.length==1){
             e1.classList.add(this.symbols[this.activePlayer])
             if(this.checkWin()){
+                //display winner
                 this.turnIndicator.innerText=this.symbols[this.activePlayer] + " wins!";
                 this.endGame();
             }
     
-            else if( this.checkDraw() ){
+            else if( this.checkDraw()){
                 this.turnIndicator.innerText="It's a draw!";
                 this.endGame();
             }
@@ -84,6 +87,52 @@ var TicTacToe={
 }
 
 window.onload = TicTacToe.init;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
