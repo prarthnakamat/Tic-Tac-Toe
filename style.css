@@ -6,15 +6,13 @@ html{
 
 *,*:before,*:after{
     box-sizing: inherit;
-
 }
 
 .tictactoe{
     background-color: rgb(216, 174, 255);
-    padding: 40px 50px 50px 50px;
+    padding: 20px 30px 45px 30px;
     border-radius: 20px;
     color: rgb(53, 0, 88);
-    
 }
 
 body{
@@ -34,7 +32,7 @@ body{
 .square{
     width: 100px;
     height: 100px;
-    border: 1px solid black;
+    border: 2px solid rgb(114, 74, 140);
     transition: 0.2s ease-out;
     cursor: pointer;
     position: relative;
@@ -109,10 +107,7 @@ body{
     z-index: 3;
     transform: rotate(-45deg);
 }
-
-
-
-    
+  
 .square.O .outline:before{
     content: "";
     background:transparent;
@@ -135,6 +130,31 @@ body{
     z-index: 3;
 }
 
+
+.square:nth-of-type(1),
+.square:nth-of-type(2),
+.square:nth-of-type(3){
+    border-top: none;
+}
+
+.square:nth-of-type(1),
+.square:nth-of-type(4),
+.square:nth-of-type(7){
+    border-left: none;
+}
+
+.square:nth-of-type(3),
+.square:nth-of-type(6),
+.square:nth-of-type(9){
+    border-right: none;
+}
+
+.square:nth-of-type(7),
+.square:nth-of-type(8),
+.square:nth-of-type(9){
+    border-bottom: none;
+}
+
 button{
     background-color: rgb(53, 0, 88);
     color: white;
@@ -150,11 +170,3 @@ button:hover{
     background-color: rgb(89, 0, 148);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16), 0 5px 6px rgba(0, 0, 0, 0.26);
 }
-
-
-
-
-
-
-
-
